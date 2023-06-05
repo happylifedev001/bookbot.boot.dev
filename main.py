@@ -2,6 +2,12 @@ def read_book(file_name):
     file_content = ""    
     with open(file_name) as f:
         file_content = f.read()
+    return file_content
+
+def report():
+    file_name = 'books/frankenstein.txt'
+    
+    file_content = read_book(file_name)
 
     print(f"--- Begin report of {file_name} ---")
     
@@ -29,4 +35,4 @@ def letter_count(text):
     return counter
 
 if __name__ == '__main__':
-    read_book('books/frankenstein.txt')
+    report()
